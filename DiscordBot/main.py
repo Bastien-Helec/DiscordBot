@@ -27,7 +27,7 @@ async def on_message(message):
         x=0
         while x<=6:
             x+=1
-            await message.channel.purge(limit=3)
+            await message.channel.purge(limit=)
             await message.channel.send(' . '*x)
             sleep(0.2)
         sleep(0.5)
