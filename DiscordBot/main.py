@@ -23,8 +23,15 @@ async def on_message(message):
         await message.channel.send('bonjour je suis un bot du groupe <@&1021394696754438145>')
     if message.content.startswith('/clear'):
         await message.channel.send('message en cours de suppression !')
+        await message.channel.send('.')
+        x=0
+        while x<=6:
+            x+=1
+            await message.channel.purge(limit=3)
+            await message.channel.send(' . '*x)
+            sleep(0.2)
         sleep(0.5)
-        await message.channel.purge(limit=2)
+        await message.channel.purge(limit=3)
 
 #↓ ceci est un test↓ 
 # @client.command()
