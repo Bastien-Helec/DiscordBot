@@ -7,7 +7,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = commands.Bot(command_prefix='!',intents=intents)
-# bot=commands.Bot(command_prefix='!',intents=intents)
+bot=commands.Bot(command_prefix='!',intents=intents)
 
 
 @client.event
@@ -32,6 +32,24 @@ async def on_message(message):
             sleep(0.2)
         sleep(0.5)
         await message.channel.purge(limit=3)
+
+# @bot.command()
+# async def deleteMessages(ctx, amount):
+#     if ctx=="clear":
+#         await ctx.channel.send(f'suppression de {amount} messages')
+#         sleep(0.4)
+#         x=0
+#         while x<=amount:
+#                 x+=1
+#                 await ctx.channel.purge(limit=1)
+#                 # await ctx.channel.send(' - '*x)
+#                 if x>amount:
+#                     await ctx.channel.send('='*x+'>')
+#                 else:
+#                     await ctx.channel.send('='*x)
+#                 sleep(0.2)
+
+#         await ctx.channel.purge(int(amount))
 
 #↓ ceci est un test↓ 
 # @client.command()
