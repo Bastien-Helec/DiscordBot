@@ -14,7 +14,7 @@ async def on_ready():
     print(f'We have logged in as {client.user}')
 
 @client.command()
-async def clear(ctx, amount=1):
+async def clear(ctx, amount=2):
         if not amount : 
             return await ctx.send("Erreur\nVous n'avez pas donner de valeur.")
         await ctx.channel.send(f'suppression de {amount} messages')
