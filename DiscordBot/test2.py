@@ -1,4 +1,5 @@
 import asyncio
+from mimetypes import common_types
 import discord
 from discord.ext import commands
 from time import sleep
@@ -24,8 +25,15 @@ async def on_message(message):
         r=random.randrange(0,20)
         if r<=10:
             await message.channel.send('bonjour je suis un bot du groupe <@&1021394696754438145>')
+        elif r>10:
+            await message.channel.send('Bonjour jeune padawan')
+        else :
+            await message.channel.send('non')
+    if message.content.startswith('non') or message.content.startswith('non'):
+        await message.channel.send("Si")
+    if message.content.startswith("Ta gueule") or message.content.startswith("TG") or message.content.startswith("tg") or message.content.startswith('Tg') or message.content.startswith('tG') or message.content.startswith("TA GUEULE"): 
+        await message.channel.send("Les insultes sont interdites ici")
     await client.process_commands(message)
-
 
 @client.command()
 async def clear(ctx, amount=2):
@@ -35,8 +43,30 @@ async def clear(ctx, amount=2):
         sleep(0.4)
         await ctx.channel.purge(limit=amount)
 
+# @client.command()
+# async def test(ctx):
+#     await ctx.send("Hello world !")
+
 @client.command()
-async def test(ctx):
-    await ctx.send("Hello world !")
+async def hello(ctx):
+    await ctx.send('Hello')
+
+@client.command()
+async def deprime(ctx):
+    await ctx.send('Il est temps de sourire !!! :)')
+
+@client.command()
+async def blowjob(ctx):
+    await ctx.send('non pas ici -_-')
+
+@client.command()
+async def  RS(ctx):
+        await ctx.send('RS est une communauté complete prete a vous accueillir')
+
+@client.command()
+async def jmennui (ctx):
+    await ctx.send("ne t'inquietes pas moi aussi")
+    
+
 
 client.run('NjIyMTI3NzkwMTkxNDExMjEw.G_AA5s.iIXkn7sRI5NVxC_2F2GlWdNjKGQb3whDOJp-Rw')
