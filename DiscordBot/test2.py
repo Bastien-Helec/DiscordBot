@@ -3,6 +3,7 @@ import discord
 from discord.ext import commands
 from time import sleep
 from config import *
+import random
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -19,8 +20,10 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('hello'):
-        await message.channel.send('bonjour je suis un bot du groupe <@&1021394696754438145>')
+    if message.content.startswith('hello') or message.content.startswith('Hello') or message.content.startswith('bonjour') or message.content.startswith('Bonjour') or message.content.startswith('slt') or message.content.startswith('Salut') or message.content.startswith('Salut') or message.content.startswith('salut') :
+        r=random.randrange(0,20)
+        if r<=10:
+            await message.channel.send('bonjour je suis un bot du groupe <@&1021394696754438145>')
     await client.process_commands(message)
 
 
