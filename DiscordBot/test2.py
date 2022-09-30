@@ -66,6 +66,10 @@ async def  RS(ctx):
 @client.command()
 async def jmennui (ctx):
     await ctx.send("ne t'inquietes pas moi aussi")
+
+@client.command()
+async def NSFW(ctx):
+    await ctx.send("Arrive prochainement !!")
     
 
 
