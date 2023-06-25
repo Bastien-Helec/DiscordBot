@@ -52,4 +52,4 @@ async def clear(ctx, amount = 1):
 #     if ctx.content.startswith('nice to meet'):
 #         await ctx.channel.send('nice to meet you too mister woman')
 
-client.run('NjIyMTI3NzkwMTkxNDExMjEw.G_AA5s.iIXkn7sRI5NVxC_2F2GlWdNjKGQb3whDOJp-Rw')
+client.run('')
