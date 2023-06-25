@@ -52,4 +52,4 @@ async def test(ctx):
     await ctx.send("Hello world !")
 
 
-client.run('NjIyMTI3NzkwMTkxNDExMjEw.G_AA5s.iIXkn7sRI5NVxC_2F2GlWdNjKGQb3whDOJp-Rw')
+client.run('')
