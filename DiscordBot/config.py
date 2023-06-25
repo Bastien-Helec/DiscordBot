@@ -4,7 +4,7 @@ class Config:
     # Init
     def __init__(self):
         self.PREFIX = "!"
-        self.TOKEN = "NjIyMTI3NzkwMTkxNDExMjEw.G_AA5s.iIXkn7sRI5NVxC_2F2GlWdNjKGQb3whDOJp-Rw"
+        self.TOKEN = ""
         self.NAME = "mr.nunusbot#0219"
         self.COLOR = 0xfffffe #la couleur des embeds
         self.VERSION = "2.0.0" #ça on s'en fout mais au cas où
